@@ -5,7 +5,7 @@
 
 <Banner --bg-color="#196090">
   <img src={svelteIcon} />
-  file manager
+  <div>file manager</div>
 </Banner>
 
 <style>
