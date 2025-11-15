@@ -2,4 +2,4 @@
   import Banner from "./lib/Banner.svelte"
 </script>
 
-<Banner --color="green">file manager</Banner>
+<Banner --bgcolor="#196090">file manager</Banner>
