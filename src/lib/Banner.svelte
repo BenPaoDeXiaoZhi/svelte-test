@@ -13,6 +13,6 @@ div {
   text-align: center;
   font-size: var(--size, 2rem);
   height: calc(var(--size, 2rem) + 0.5rem);
-  line-height: calc(var(--size, 2rem) + 90px);
+  line-height: calc(var(--size, 2rem) + 0.5rem);
 }
 </style>
