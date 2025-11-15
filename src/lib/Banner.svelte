@@ -12,7 +12,7 @@ div {
   color: var(--color, white);
   display: flex;
   align-items: center;
-  justfy-content: center;
+  justify-content: center;
   font-size: var(--size, 2rem);
   height: calc(var(--size, 2rem) + 0.5rem);
   line-height: calc(var(--size, 2rem) + 0.5rem);
