@@ -7,7 +7,7 @@
 
 <style>
 h1 {
-  background-color: blue;
+  background-color: var(--bg-color, blue);
   width: 100vw;
   color: var(--color, white);
   text-align: center;
