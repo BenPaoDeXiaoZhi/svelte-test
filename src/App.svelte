@@ -1,5 +1,6 @@
 <script lang="ts">
   import Banner from "./lib/Banner.svelte";
+  import svelteIcon from './assets/svelteicon.svg'
   import FileDisplay from './lib/FileDisplay.svelte'
   let reslist=$state([])
 </script>
