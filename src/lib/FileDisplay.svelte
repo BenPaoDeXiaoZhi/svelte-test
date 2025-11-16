@@ -4,7 +4,7 @@ import Folder from './Folder.svelte'
 </script>
 
 <div class="container">
-{#each dirlist as res}
+{#each reslist as res}
   {#if res.type == "folder"}
     <Folder name=res.name />
   {:else if res.type== "file"}
