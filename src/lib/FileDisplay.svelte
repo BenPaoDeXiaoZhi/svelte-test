@@ -19,5 +19,6 @@ import Folder from './Folder.svelte'
   border-radius: 0.2rem;
   border-color: gray;
   display: flex;
+  flex-direction: column;
 }
 </style>
