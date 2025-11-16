@@ -6,14 +6,14 @@
 </script>
 
 <Banner --bg-color="#196090">
-  <img src={svelteIcon} />
+  <img src={svelteIcon} alt="icon" />
   <div>file manager</div>
 </Banner>
 <FileDisplay reslist={reslist} />
 <button onclick={(e)=>reslist.push({
   type:"folder",
   name:"abc"+reslist.length
-})} />
+})}>add abc file</button>
 
 <style>
   img {
