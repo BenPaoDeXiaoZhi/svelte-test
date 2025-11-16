@@ -17,6 +17,11 @@ let { name } = $props()
   background-color: white;
   border-style: solid;
   border-color: grey;
+  border-width: 0.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 0.5rem
 }
 .name {
   font-size: 1rem;
