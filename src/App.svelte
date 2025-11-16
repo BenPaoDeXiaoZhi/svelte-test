@@ -8,11 +8,11 @@
   <img src={svelteIcon} />
   <div>file manager</div>
 </Banner>
-<FileDisplay reslist={reslist}>
+<FileDisplay reslist={reslist} />
 <button onclick={(e)=>reslist.push({
   type:"folder",
   name:"abc"+reslist.length
-})}>
+})} />
 
 <style>
   img {
