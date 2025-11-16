@@ -6,7 +6,7 @@ import Folder from './Folder.svelte'
 <div class="container">
 {#each reslist as res}
   {#if res.type == "folder"}
-    <Folder name=res.name />
+    <Folder name={res.name} />
   {:else if res.type== "file"}
     <div>{res.name}</div>
   {/if}
@@ -18,5 +18,6 @@ import Folder from './Folder.svelte'
   border-style: solid;
   border-radius: 0.2rem;
   border-color: gray;
+  display: flex;
 }
 </style>
