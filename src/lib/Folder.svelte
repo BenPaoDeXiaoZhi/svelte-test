@@ -15,13 +15,14 @@ let { name } = $props()
   width: 100%;
   height: 1.5rem;
   background-color: white;
-  border-style: solid;
-  border-color: grey;
-  border-width: 0.5px;
+  border-top-style: solid;
+  border-top-color: grey;
+  border-top-width: 0.5px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px 0.5rem;
+  box-sizing: border-box;
 }
 .name {
   font-size: 1rem;
