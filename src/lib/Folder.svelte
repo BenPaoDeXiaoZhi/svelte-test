@@ -21,10 +21,11 @@ let { name } = $props()
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0px 0.5rem
+  padding: 0px 0.5rem;
 }
 .name {
   font-size: 1rem;
   color:black;
+  padding: 0px 0.2rem
 }
 </style>
