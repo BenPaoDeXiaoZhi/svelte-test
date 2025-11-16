@@ -4,7 +4,7 @@ let { name } = $props()
 </script>
 
 <div class="container">
-  <img src={folderIcon} display="inline" height="70%">
+  <img src={folderIcon} display="inline" height="70%" alt="folder">
   <div class="name">
     {name}
   </div>
