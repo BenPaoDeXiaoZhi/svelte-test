@@ -5,7 +5,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 export default defineConfig({
   base:"./",
   build:{
-    assetsInlineLimit:0
+    assetsInlineLimit:4096
   },
   plugins: [svelte()],
 })
