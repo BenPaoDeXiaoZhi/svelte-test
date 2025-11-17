@@ -10,6 +10,9 @@
       console.log(e);
       root = this.value;
     }}
+    onchange={function (e){
+      this.blur()
+    }}
     id="root"
   />
 </div>
