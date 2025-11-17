@@ -1,10 +1,10 @@
 <script lang="ts">
-  import folderIcon from "../assets/folder.svg";
+  import fileIcon from "../assets/file.svg";
   let { name } = $props();
 </script>
 
 <div class="container">
-  <img src={folderIcon} height="70%" alt="folder" />
+  <img src={fileIcon} height="70%" alt="folder" />
   <div class="name">
     {name}
   </div>
