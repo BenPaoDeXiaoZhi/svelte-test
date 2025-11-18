@@ -1,17 +1,23 @@
 <script lang="ts">
-  let { defaultRoot, root = $bindable(defaultRoot) } = $props();
+  let {
+    root = $bindable(),
+    emit = function (dat: string) {
+      console.log(dat);
+    },
+  } = $props();
 </script>
 
 <div class="container">
   <div class="hint">input root:</div>
   <input
-    value={defaultRoot}
-    onblur={function (e) {
+    bind:value={root}
+    type="text"
+    onchange={function (e) {
       console.log(e);
-      root = this.value;
-    }}
-    onchange={function (e){
-      this.blur()
+      if (!root.endsWith("/")) {
+        root += "/";
+      }
+      emit();
     }}
     id="root"
   />

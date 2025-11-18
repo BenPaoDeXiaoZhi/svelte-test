@@ -9,10 +9,15 @@
   const defaultRoot = "https://files.schale.qzz.io/";
   let root = $state(defaultRoot);
   let loading = $state(true);
-  $effect(() => {
+  function fetchFiles() {
     reslist = [];
     fetch(root + "index.json")
-      .then((res) => res.text())
+      .then((res) => {
+        if (res.ok) return res.text();
+        else {
+          throw new Error("404");
+        }
+      })
       .then((raw) => {
         loading = false;
         const raw_list: { dir: string[]; files: string[] } = JSON.parse(raw);
@@ -22,6 +27,12 @@
             name: dir,
           });
         }
+        for (let fileName of raw_list.files) {
+          reslist.push({
+            type: "file",
+            name: fileName,
+          });
+        }
         $state.snapshot(reslist);
       })
       .catch((e) => {
@@ -29,25 +40,16 @@
         console.error(e);
       });
     loading = true;
-  });
+  }
+  fetchFiles();
 </script>
 
 <Banner --bg-color="#196090">
   <img src={svelteIcon} alt="icon" />
   <div>file manager</div>
 </Banner>
-<RootInput bind:root {defaultRoot}></RootInput>
-<FileDisplay {reslist} {loading} />
-<button
-  onclick={(e) => {
-    reslist.push({
-      type: "folder",
-      name: root + reslist.length,
-    });
-  }}
->
-  add abc file
-</button>
+<RootInput bind:root emit={fetchFiles}></RootInput>
+<FileDisplay {reslist} {loading} bind:currentDir={root} emit={fetchFiles} />
 
 <style>
   img {
