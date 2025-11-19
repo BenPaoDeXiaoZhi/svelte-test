@@ -36,5 +36,7 @@
     font-size: 1rem;
     color: black;
     padding: 0px 0.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 </style>
